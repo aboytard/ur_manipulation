@@ -85,3 +85,5 @@ add_executable(endurance_demo src/endurance_demo.cpp
                           src/endurance_test_logger.cpp
                           )
 target_link_libraries(endurance_demo ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+
+

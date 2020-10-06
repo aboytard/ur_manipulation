@@ -8,6 +8,7 @@
 
 
 #include "ur_manipulation/moveit_custom_api.hpp"
+#include "ur_manipulation/endurance_test_logger.hpp"
 
 #include <std_msgs/Header.h>
 #include <std_msgs/Int64.h>
