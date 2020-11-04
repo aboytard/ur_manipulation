@@ -475,11 +475,12 @@ void MoveitCustomApi::initialiseMoveit(ros::NodeHandle nh)
   move_group = new moveit::planning_interface::MoveGroupInterface(GROUP_MANIP);
   joint_model_group = move_group->getCurrentState()->getJointModelGroup(GROUP_MANIP);
 
-  visual_tools = new moveit_visual_tools::MoveItVisualTools("base_link");
+//  visual_tools = new moveit_visual_tools::MoveItVisualTools("base_link");
+  visual_tools = new moveit_visual_tools::MoveItVisualTools("prbt_joint_1");
   visual_tools->deleteAllMarkers();
   visual_tools->loadRemoteControl();
   text_pose.translation().z() = 1.75;
-  visual_tools->publishText(text_pose, "Seher Demo", rvt::WHITE, rvt::XLARGE);
+  visual_tools->publishText(text_pose, "Prbt Demo", rvt::WHITE, rvt::XLARGE);
   visual_tools->trigger();
   planning_scene_diff_publisher = nh.advertise<moveit_msgs::PlanningScene>("planning_scene", 1);
 
